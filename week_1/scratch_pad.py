@@ -1,4 +1,4 @@
- varA = 1
+varA = 1
 varB = 3
 
 if type(varA) == str or type(varB) == str:
@@ -165,7 +165,7 @@ print('#############')
 print('#############')
 print()
 
-import regex as re
+#import regex as re
 s = 'azcbobobegghakl'
 # s = {}
 numBob = 0
@@ -180,4 +180,109 @@ match = re.findall(r'(?=(\w\w))', s2, overlapped=True)
 numBob += 1
 
 print(match)
-print('Number of times bob occurs is: ' + str(numBob))
+print('Number of times bob occurs is: ' + str(numBob))\
+
+
+test = s[0]
+best = ''
+
+for n in range(1, len(s)):
+ if len(test) > len(best):
+     best = test
+ if s[n] >= s[n - 1]:
+     test = test + s[n]
+ else:
+     test = s[n]
+
+print("Longest substring in alphabetical order is:", best)
+
+print()
+print('#############')
+print('#############')
+print('#############')
+print()
+
+num = 10
+print('Hello!')
+while num > 1:
+    print(num)
+    num -= 2
+
+print()
+print('#############')
+print('#############')
+print('#############')
+print()
+
+#end = 6
+end = 16
+n = 0
+# start = 1
+formula = []
+while n < end + 1:
+    # for n in range(0, end + 1):
+    # print(formula)
+    # print()
+    # print(sum(formula))
+    n += 1
+    formula.append(n)
+print(sum(formula[:-1]))
+
+print()
+print('#############')
+print('#############')
+print('#############')
+print()
+
+n = 0
+# start = 1
+formula = []
+while n < end:  # + 1:
+    # for n in range(0, end + 1):
+    # print(formula)
+    # print()
+    # print(sum(formula))
+    n += 1
+    formula.append(n)
+print(sum(formula))
+
+print()
+print('#############')
+print('#############')
+print('#############')
+print()
+
+# Here is one of a few ways to solve this problem:
+total = 0
+current = 1
+while current <= end:
+    total += current
+    current += 1
+
+print(total)
+
+print()
+print('#############')
+print('#############')
+print('#############')
+print()
+
+print('Hello!')
+for n in reversed(range(2, 12, 2)):
+    print(n)
+
+print()
+print('#############')
+print('#############')
+print('#############')
+print()
+
+end = 6
+total = 0
+current = 1
+for i in range(0, end):
+    current <= end
+    total += current
+    current += 1
+
+print(total)
