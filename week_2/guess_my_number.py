@@ -1,7 +1,6 @@
-high = 0
+high = 100
 low = 0
-guess = 50
-new_guess = 0
+guess = 0
 num_guesses = 100
 x = ''
 h = ''
@@ -12,7 +11,7 @@ c = ''
 print('Please think of a number between 0 and 100!')
 while num_guesses > 1:
 
-    print('Is your secret number {} ?'.format(guess))
+    print('Is your secret number {}?'.format(guess))
     x = input("Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. "
             "Enter 'c' to indicate I guessed correctly. ")
 #    if x != h or c or l:
@@ -23,20 +22,27 @@ while num_guesses > 1:
         print('Game over. Your secret number was: {}'.format(guess))
         print('pressed c')
         num_guesses -= 1
-
+        exit()
     elif x == 'h':     # they pressed h
-        new_guess = guess / 2.0
-        print(new_guess)
-        print('pressed h')
+        guess = (high + low) / 2.0
+        high = guess
+        # new_guess = guess / 2.0
+        # guess = new_guess
+        # print(new_guess)
+        print(guess)
+        # print('pressed h')
         num_guesses -= 1
     elif x == 'l':   # they pressed l
-        new_guess = guess * 2.0
-        print(new_guess)
-        print('pressed l')
+        guess = (high + low) / 2.0
+        low = guess
+        # new_guess = guess * 2.0
+        # print(new_guess)
+        # print('pressed l')
         num_guesses -= 1
     else:
-
+        print('Sorry, I did not understand your input.')
         num_guesses -= 1
+
 #elif x == l:
 #    pass
 #elif x == c:
