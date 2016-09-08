@@ -20,20 +20,20 @@ while num_guesses > 1:
 
     if x == 'c':
         print('Game over. Your secret number was: {}'.format(guess))
-        print('pressed c')
+        # print('pressed c')
         num_guesses -= 1
         exit()
     elif x == 'h':     # they pressed h
-        guess = (high + low) / 2.0
+        guess = (high + low) // 2
         high = guess
-        # new_guess = guess / 2.0
+        # new_guess = guess / 2
         # guess = new_guess
         # print(new_guess)
         print(guess)
         # print('pressed h')
         num_guesses -= 1
     elif x == 'l':   # they pressed l
-        guess = (high + low) / 2.0
+        guess = (high + low) // 2
         low = guess
         # new_guess = guess * 2.0
         # print(new_guess)
