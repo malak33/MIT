@@ -79,3 +79,10 @@ if abs(guess**2 - x) >= epsilon:
     print('failed')
 else:
     print('succeeded: ' + str(guess))
+
+print()
+print('#############')
+print('#############')
+print('#############')
+print()
+
