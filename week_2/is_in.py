@@ -6,6 +6,10 @@ def isIn(char, aStr):
     returns: True if char is in aStr; False otherwise
     '''
     # Your code here
+#    if b == 0:
+#       return a
+#    else:
+#       return gcdRecur(b, a % b)
 
     else:
-        return isIn(char, aStr=)
+        return sort(isIn(char, aStr))
