@@ -10,6 +10,11 @@ def isIn(char, aStr):
 #       return a
 #    else:
 #       return gcdRecur(b, a % b)
-
+    if len(aStr) == 0 or (len(aStr) == 1 and char.toString != aStr):
+        return False
+    elif aStr[len(aStr) // 2] == char:
+        return True
+    elif aStr[len(aStr) // 2] > char:
+        return isIn(char, aStr[:len(aStr) // 2])
     else:
-        return sort(isIn(char, aStr))
+        return isIn(char, aStr[len(aStr) // 2 + 1:])
