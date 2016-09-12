@@ -70,4 +70,4 @@ while month < 11:
     monthly_unpaid_balance = new_balance - minimum_monthly_payment
     update_balance_each_month = monthly_unpaid_balance + monthly_interest_rate * monthly_unpaid_balance
     # print()
-print('Month {} Remaining balance: {}'.format(month + 1, round(update_balance_each_month, 2)))
+print('Remaining balance: {}'.format(round(update_balance_each_month, 2)))
