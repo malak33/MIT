@@ -28,46 +28,25 @@ Monthly unpaid balance = (Previous balance) - (Minimum monthly payment)
 Updated balance each month = (Monthly unpaid balance) + (Monthly interest rate x Monthly unpaid balance)
 """
 # commentting out the debug statements and the folling variables balance, annulaInterestRate, and monthlyPaymentRate
-new_balance = 0
 balance = 42
-new_balance = balance
 annualInterestRate = 0.2
-monthlyPaymentRate = 0.04
 
-monthly_interest_rate = annualInterestRate / 12
-minimum_monthly_payment = monthlyPaymentRate * new_balance
-monthly_unpaid_balance = new_balance - minimum_monthly_payment
-update_balance_each_month = monthly_unpaid_balance + monthly_interest_rate * monthly_unpaid_balance
-month = 0
+b = balance = 3329
+air = annualInterestRate = 0.2
+monthlyInterestRate = (air/12)
+mmp = minimumMonthlyPayment = (balance * monthlyInterestRate)
+monthlyInterestRate = annualInterestRate/12
+monthlyPayment = 0
+newbalance = balance
+while newbalance > 0:
+    monthlyPayment += 10
+    newbalance = balance
+    month = 1
 
-
-while month < 11:
-    # debugging below
-    # print('balance:  {}'.format(balance))
-    # print('new_balance: {}'.format(new_balance))
-    # print('annualInterestRate: {} '.format(annualInterestRate))
-    # print('monthly_interest_rate: {}'.format(monthly_interest_rate))
-    # print('minimum_monthly_payment: {}'.format(minimum_monthly_payment))
-    # print('monthly_unpaid_balance: {}'.format(monthly_unpaid_balance))
-    # print('update_balance_each_month: {}'.format(update_balance_each_month))
-    # print('month: {}'.format(month))
-
-    # adding to the loop to be updated each time it runs
-    # minimum_monthly_payment = monthlyPaymentRate * new_balance
-    # monthly_unpaid_balance = new_balance - minimum_monthly_payment
-
-    new_balance = update_balance_each_month
-    # print('new_balance: {}'.format(new_balance))
-    # new_balance = balance
-    balance = new_balance
-    # print('balance for next month: {}'.format(balance))
-    month += 1
-
-    # print('Month {} Remaining balance: {}'.format(month + 1, round(update_balance_each_month, 2)))
-
-    # adding to the loop to be updated each time it runs
-    minimum_monthly_payment = monthlyPaymentRate * new_balance
-    monthly_unpaid_balance = new_balance - minimum_monthly_payment
-    update_balance_each_month = monthly_unpaid_balance + monthly_interest_rate * monthly_unpaid_balance
-    # print()
-print('Remaining balance: {}'.format(round(update_balance_each_month, 2)))
+    while month <= 12 and newbalance > 0:
+        newbalance -= monthlyPayment
+        interest = monthlyInterestRate * newbalance
+        newbalance += interest
+        month += 1
+    newbalance = round(newbalance,2)
+print('Lowest Payment: {}'.format((round(mmp, 2))))
