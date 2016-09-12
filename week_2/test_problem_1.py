@@ -53,8 +53,8 @@ while month < 11:
     # print('month: {}'.format(month))
 
     # adding to the loop to be updated each time it runs
-    minimum_monthly_payment = monthlyPaymentRate * new_balance
-    monthly_unpaid_balance = new_balance - minimum_monthly_payment
+    # minimum_monthly_payment = monthlyPaymentRate * new_balance
+    # monthly_unpaid_balance = new_balance - minimum_monthly_payment
 
     new_balance = update_balance_each_month
     # print('new_balance: {}'.format(new_balance))
