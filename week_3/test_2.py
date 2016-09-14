@@ -13,9 +13,7 @@ def oddTuples(aTup):
     # Your Code Here
     count = 0
     for i in aTup:
-        print(i[:count])
-        count += 2
-
+        return aTup[::2]
 
 
 
