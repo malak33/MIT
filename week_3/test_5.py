@@ -1,7 +1,17 @@
-testList = [1, -4, 8, -9]
-
-def applyToEach(L, f):
+def applyEachTo(L, x):
+    result = []
     for i in range(len(L)):
-        L[i] = f(L[i])
+        result.append(L[i](x))
+    return result
 
-applyToEach(    )
+def square(a):
+    return a*a
+
+def halve(a):
+    return a/2
+
+def inc(a):
+    return a+1
+
+
+print(applyEachTo([inc, max, int], -3))
